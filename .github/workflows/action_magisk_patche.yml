@@ -30,7 +30,7 @@ jobs:
           aria2c -s 10 -x 10 -d . -o boot.img "${{ github.event.inputs.boot_url }}"
           mkdir done
           echo 正在修补
-          wget https://github.com/xyazzrany/Magisk_patche/blob/main/boot_patch.sh %% chmod +x boot_patch.sh
+          wget https://github.com/xyazzrany/Magisk_patche/blob/main/boot_patch.sh && chmod +x boot_patch.sh
           ./boot_patch.sh ./boot.img
           echo "done"
           mv new-boot.img done/
